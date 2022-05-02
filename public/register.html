@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Yeon+Sung&display=swap" rel="stylesheet">
+    <meta http-equiv=" X-UA-Compatible" content="ie=edge">
+    <title>Personal</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Anton|Luckiest+Guy&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        height: 100%;
+        color: #ffffff;
+        font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    h2,
+    h4 {
+        font-weight: 900;
+    }
+
+    #login-one {
+        background-image: url(sit2.jpeg);
+        background-repeat: repeat-x;
+        background-size: cover;
+        min-height: 100vh;
+        width: 100%;
+        /* may not be necessary */
+    }
+
+    .wholecont {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+        margin-right: 2%;
+        margin-left: 2%;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .regcontainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .regcontainer h1 {
+        margin-top: 2%;
+        margin-right: 0%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 2rem;
+        font-family: 'Poppins', sans-serif;
+        text-shadow: 1px 1px 5px #000000;
+    }
+
+    .name,
+    .email,
+    .number,
+    .interest,
+    .gender,
+    .place,
+    .btn,
+    .password,
+    .projectdescript1,
+    .projectdescript2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .name,
+    .email,
+    .number,
+    .place,
+    .password input {
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .name {
+        margin-bottom: 2%;
+    }
+
+    .projectdescript1 textarea {
+        margin-right: 0%;
+        margin-top: 2%;
+        height: 90px;
+        width: 250px;
+    }
+
+    .projectdescript2 textarea {
+        margin-right: 0%;
+        margin-top: 2%;
+        height: 50px;
+        width: 300px;
+    }
+
+    .interest select {
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .gender select {
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    button {
+        padding: 1.3em 3em;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+
+    button:hover {
+        background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+    }
+
+    button:active {
+        transform: translateY(-1px);
+    }
+
+    .btn #submitbtn {
+        margin-top: 2%;
+        margin-bottom: 6%;
+    }
+
+    .btn #submitbtn:hover {
+        transition: all .3s;
+        background: rgb(21, 167, 21);
+        color: #ffffff;
+        /* box-shadow: 1px 1px 7px #000000; */
+    }
+
+    .btn #backbtn {
+        /* margin-right: 0%; */
+        margin-top: -3%;
+        margin-bottom: 2%;
+    }
+
+    .btn #backbtn:hover {
+        transition: all .3s;
+        background: rgb(21, 167, 21);
+        color: #ffffff;
+        /* box-shadow: 1px 1px 7px #000000; */
+    }
+
+    input,
+    textarea {
+        background: #ffffff;
+        outline: none;
+        padding: .5em .5em;
+        border-radius: 2px;
+        border: none;
+        font-family: 'Lexend Deca', sans-serif;
+
+    }
+
+    select {
+        background: #ffffff;
+        font-family: 'Lexend Deca', sans-serif;
+        padding: .5em .5em;
+        border-radius: 2px;
+    }
+
+    .question1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+        text-shadow: 1px 1px 5px #000000;
+    }
+
+    .reply1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+    }
+
+    .reply1 #No {
+        margin-left: 3%;
+    }
+
+    .question2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+        text-shadow: 1px 1px 5px #000000;
+    }
+
+    .reply2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+    }
+
+    .reply2 #No {
+        margin-left: 3%;
+    }
+
+    label {
+        font-size: 1.6rem;
+    }
+
+    @media all and (max-width:730px) {
+        .interest select {
+            width: 200px;
+            margin-bottom: 3%;
+        }
+
+        input {
+            margin-bottom: 3%;
+        }
+
+        .btn #submitbtn {
+            margin-right: 0%;
+            margin-top: 4%;
+            margin-bottom: 8%;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0.5em 0.5em;
+            background: #ffffff;
+            border: none;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .regcontainer h1 {
+            margin-top: 2%;
+            margin-right: 0%;
+            margin-bottom: 3%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 1px 1px 5px #000000;
+        }
+    }
+</style>
+
+<body onload="picchange()">
+    <section id="login-one">
+        <div id="login-one">
+
+            <div class="wholecont" id="perscont">
+                <div class="regcontainer">
+                    <h1>Personal Details</h1>
+
+                </div>
+
+
+
+                <form action="/details" method="POST">
+
+
+                    <div class="name">
+                        <input type="text" name="name" placeholder="e.g John" autocomplete="off" required></input>
+                    </div>
+                    <div class="email">
+                        <input type="email" name="email" placeholder="e.g xyz@gmail.com" autocomplete="off"
+                            required></input>
+                    </div>
+                    <div class="number">
+                        <input type="text" name="number" placeholder="Contact No" autocomplete="off" required></input>
+                    </div>
+
+                    <div class="interest">
+                        <select name="branch" required>
+                            <option hidden>Branch</option>
+                            <option>Computer Engineering / Information Technology</option>
+                            <option>Electrical Engineering</option>
+                            <option>Mechanical / Automobile Engineering</option>
+                            <option>Civil Engineering</option>
+                            <option>Electronics & Telecommunication Engineering</option>
+                        </select>
+                    </div>
+                    <div class="name">
+                        <input type="text" name="clgaddr" placeholder="College Address" required></input>
+                    </div>
+
+                    <div class="btn">
+                        <button id="submitbtn" onclick="projdisplay()">Next</button>
+
+                    </div>
+
+
+            </div>
+            <!----------------------------------------------------------------->
+            <div class="wholecont" id="projcont" style="display: none;">
+                <div class="regcontainer">
+                    <h1>Project Details</h1>
+
+                </div>
+
+                <div class="name">
+                    <input type="text" name="projname" placeholder="Project Title" required></input>
+                </div>
+                <div class="email">
+                    <input type="text" name="projguide" placeholder="Guide Name" required></input>
+                </div>
+                <div class="number">
+                    <input type="number" name="guidenumber" placeholder="Guide Contact No." required></input>
+                </div>
+                <div class="projectdescript1">
+                    <textarea name="projdescription" placeholder="Project Description"></textarea>
+                </div>
+                <div class="projectdescript2">
+                    <textarea name="projrequire" placeholder="Project Requirement, If Any ?"></textarea>
+                </div>
+                <div class="btn">
+                    <button id="submitbtn" onclick="acceptpage()">Done &#8594;</button>
+                    </form>
+                </div>
+
+                <div class="btn">
+                    <button id="backbtn" onclick="backtopersonal()">Back &#8592;</button>
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+</body>
+<!--<script src="./js/main.js"></script>-->
+<script type="text/javascript">
+    console.log("Hello")
+    let picchange = () => {
+        console.log("hee")
+        document.getElementById("login-one").style.backgroundImage = "url('sin1.jpg')";
+    }
+
+    let projdisplay = () => {
+        var personalcontainer = document.getElementById("perscont");
+        var projectcontainer = document.getElementById("projcont");
+        personalcontainer.style.display = "none";
+        projectcontainer.style.display = "block";
+    }
+
+    let backtopersonal = () => {
+        var personalcontainer = document.getElementById("perscont");
+        var projectcontainer = document.getElementById("projcont");
+        personalcontainer.style.display = "block";
+        projectcontainer.style.display = "none";
+    }
+
+    let acceptpage = () => {
+        var personalcontainer = document.getElementById("perscont");
+        var projectcontainer = document.getElementById("projcont");
+        var acceptcontainer = document.getElementById("acceptcont");
+        personalcontainer.style.display = "none";
+        projectcontainer.style.display = "none";
+        acceptcontainer.style.display = "block";
+    }
+
+    let backtopersonal2 = () => {
+        var personalcontainer = document.getElementById("perscont");
+        var projectcontainer = document.getElementById("projcont");
+        var acceptcontainer = document.getElementById("acceptcont");
+        personalcontainer.style.display = "none";
+        projectcontainer.style.display = "block";
+        acceptcontainer.style.display = "none";
+    }
+</script>
+
+</html>

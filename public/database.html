@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stud.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <title>Registered Students</title>
+</head>
+<style>
+    .studentnumber{
+        display: flex;
+        justify-content: center;
+       
+        margin-bottom: 2%;
+    }
+.studentnumber h2{
+    margin-top: 1%;
+}
+@media all and (max-width:730px){
+    .studentnumber h2{
+        margin-bottom: 15%;
+    }
+}
+</style>
+<body>
+    <section class="students">
+        <div class="students">
+            <div class="studentnumber" id="studentnumber">
+                
+            </div>
+            <div class="studentcont" id="cont">
+            
+            </div>
+        </div>
+    </section>
+</body>
+<script src="students.js"></script>
+</html>

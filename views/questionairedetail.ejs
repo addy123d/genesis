@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Yeon+Sung&display=swap" rel="stylesheet
+    <meta http-equiv=" X-UA-Compatible" content="ie=edge">
+    <title>Personal</title>
+</head>
+<style>
+    .login-one {
+        background-image: url(sit2.jpg);
+        background-repeat: repeat-x;
+        background-size: cover;
+        min-height: 100vh;
+        width: 100%;
+        /* may not be necessary */
+    }
+
+    .wholecont {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+        margin-right: 2%;
+        margin-left: 2%;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .regcontainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .regcontainer h1 {
+        margin-top: 2%;
+        margin-right: 0%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 2rem;
+        font-family: 'Poppins', sans-serif;
+        text-shadow: 1px 1px 5px #000000;
+    }
+
+    .name,
+    .email,
+    .number,
+    .interest,
+    .gender,
+    .place,
+    .btn,
+    .password,
+    .projectdescript1,
+    .projectdescript2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .name,
+    .email,
+    .number,
+    .place,
+    .password input {
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .projectdescript1 textarea {
+        margin-right: 0%;
+        margin-top: 2%;
+        height: 90px;
+        width: 250px;
+    }
+
+    .projectdescript2 textarea {
+        margin-right: 0%;
+        margin-top: 2%;
+        height: 50px;
+        width: 300px;
+    }
+
+    .interest select {
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .gender select {
+        margin-right: 0%;
+        margin-top: 2%;
+    }
+
+    .btn #submitbtn {
+        margin-right: 0%;
+        margin-top: 0%;
+        margin-bottom: 2%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .btn #backbtn {
+        margin-right: 0%;
+        margin-top: -3%;
+        margin-bottom: 2%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    input,
+    textarea {
+        background: #ffffff;
+        padding: .5em .5em;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Lexend Deca', sans-serif;
+
+    }
+
+    select {
+        background: #ffffff;
+        font-family: 'Lexend Deca', sans-serif;
+        padding: .5em .5em;
+        border-radius: 10px;
+    }
+
+    .question1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+        text-shadow: 1px 1px 5px #000000;
+    }
+
+    .reply1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+    }
+
+    .reply1 #No {
+        margin-left: 3%;
+    }
+
+    .question2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+        text-shadow: 1px 1px 5px #000000;
+    }
+
+    .reply2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+    }
+
+    .reply2 #two {
+        margin-left: 3%;
+    }
+
+    label {
+        font-size: 1.6rem;
+    }
+
+    .detailemail{
+        margin-bottom: 2%;
+    }
+
+  .interest {
+      margin-bottom: 2%;
+      display: flex;
+      justify-content: center;
+  }
+
+  .interest select{
+      display: flex;
+      justify-content: center;
+  }
+  @media all and (max-width:730px){
+    .question1, .question2{
+          font-size: .7rem;
+          margin-right: 2%;
+          margin-left: 2%;
+      }
+      label {
+        font-size: 1rem;
+    }
+    .interest{
+        margin-bottom: 2%;
+    }
+    .interest select{
+        width: 200px;
+    }
+    .detailemail{
+        margin-bottom: 10%;
+    }
+    .question1,.question2{
+        margin-bottom: 1%;
+    }
+    .reply1,.reply2{
+        margin-bottom: 7%;
+    }
+   button{
+       font-size: .7rem;
+   }
+  }
+</style>
+
+<body>
+    <section class="login-one">
+        <div class="login-one">
+            <div class="wholecont" id="acceptcont">
+                <div class="regcontainer">
+                    <h1>Details</h1>
+
+                </div>
+                <form action="iitdet" method="POST">
+                <div class="email detailemail">
+                    <input type="email" name="email" value="<%= emailval %>" placeholder="e.g xyz@gmail.com" readonly required></input>
+                </div>
+                <div class="question1">
+                    <h2>Do you want free certification for C programming from IIT Bombay ?</h2>
+                </div>
+
+                <div class="reply1">
+                    <input type="radio" id="Yes" name="reply1" value="Yes">
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="reply1" value="No">
+                    <label for="No">No</label><br>
+                </div>
+                <div class="question1">
+                    <h2>Do you want free accomodation ?</h2>
+                </div>
+
+                <div class="reply1">
+                    <input type="radio" id="Yes" name="reply3" value="Yes">
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="reply3" value="No">
+                    <label for="No">No</label><br>
+                </div>
+
+                <div class="question2">
+                    <h2>Do you want to register for free workshop on Sunday ?</h2>
+                </div>
+
+                <div class="reply2">
+                    <input type="radio" id="one" name="reply2" value="Yes" oninput="answer1()">
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="two" name="reply2" value="No" oninput="answer2()">
+                    <label for="No">No</label><br>
+                </div>
+
+                <div class="interest" id="option" style="display: none;">
+                    <select name="list" required>
+                        <option hidden>List of Workshops</option>
+                        <option>Electrical House Wiring</option>
+                        <option>Attractive Graphic Designing</option>
+                        <option>Design and Simulation VLAN using CISCO Packet Tracer</option>
+                        <option>Internet Of Things</option>
+                        <option>VLSI</option>
+                        <option>Microcontroller & Application</option>
+                        <option>3D Printing</option>
+                        <option>IC Engine</option>
+                    </select>
+                </div>
+                <div class="btn">
+                    <button id="submitbtn">Done &#10004;</button>
+                
+                </form>
+                </div>
+
+
+        
+
+
+                <div class="btn">
+                    <button id="backbtn" onclick="backtopersonal2()">Back &#8592;</button>
+                </div>
+
+            </div>
+     
+
+        </div>
+
+
+
+
+        </div>
+    </section>
+</body>
+<script src="./js/main.js"></script>
+<script type="text/javascript">
+console.log("Hello")
+let answer1= ()=>{
+    console.log("Entered1");
+    var response1 = document.getElementById("one").value;
+    var response2 = document.getElementById("two").value;
+    var options = document.getElementById("option");
+    options.style.display = "flex";
+    options.style.justifyContent = "center"
+}
+
+let answer2= ()=>{
+    console.log("Entered2");
+    
+    var options = document.getElementById("option");
+    options.style.display = "none"
+
+}
+</script>
+
+
+</html>

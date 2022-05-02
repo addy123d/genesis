@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Anton|Luckiest+Guy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+ height: 100%;
+ color: #ffffff;
+ font-family: 'Poppins',Arial, sans-serif;
+}
+h2,h4{
+ font-weight: 900;
+}
+.three{
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(sit1.jpeg);
+background-repeat: repeat-x;   
+
+background-size: cover; 
+min-height: 100vh;
+width: 100%; /* may not be necessary */
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.title h2{
+    margin-top: 1%;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    margin-top: 3%;
+    margin-left: 0%;
+   
+}
+.images img{
+    margin-bottom: 2%;
+}
+.images div{
+    margin: 10px;
+}
+img{
+    height: 100%;
+    width: 600px;
+    cursor: pointer;
+}
+
+img:hover{
+    transition: all .3s;
+    transform: scale(1.06);
+    box-shadow: 1px 1px 15px #ffffff;
+}
+
+
+@media all and (max-width:730px){
+    .images{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 3%;
+        margin-left: 0%;
+    }
+
+    img{
+        height: 250px;
+        width: 300px;
+    }
+    .title h2{
+        margin-top: 1%;
+        font-size: 2rem;
+        text-shadow: 1px 1px 5px #000000;
+    }
+    
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Anton|Luckiest+Guy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+ height: 100%;
+ color: #ffffff;
+ font-family: 'Poppins', sans-serif;
+}
+h2,h4{
+ font-weight: 900;
+}
+.payment{
+background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(paymentpage.jpg);
+background-repeat: repeat-x;   
+
+background-size: cover; 
+min-height: 100vh;
+width: 100%; /* may not be necessary */
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.title h2{
+    margin-top: 1%;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+img{
+    height: 200px;
+    width: 350px;
+}
+.googlepayimg{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.payicon{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+.payicon i{
+    font-size: 5rem;
+    color: #1a1919;
+    animation: name both .5s alternate-reverse infinite;
+}
+.paynumber{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.paynumber h2{
+    letter-spacing: 3px;
+    font-size: 1.8rem;
+}
+
+.transactionid{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 0%;
+}
+
+.transactionbtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.transactionbtn button{
+    padding: 0.5em 0.5em;
+    background: #ffffff;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat',sans-serif ;
+}
+
+.transactionbtn button:hover{
+    transition: all .3s;
+    background: rgb(21, 167, 21) ;
+    color: #ffffff;
+    box-shadow: 1px 1px 7px #000000;
+}
+input{
+    background: #ffffff;
+    padding: .5em .5em;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+@keyframes name{
+    from{
+        color: #ffffff;
+        
+    }
+    to{
+        color: #666161; 
+    }
+}
+
+@media all and (max-width:730px){
+    img{
+        height: 150px;
+        width: 300px;
+    }
+    .payicon i{
+        font-size: 3rem;
+        color: #1a1919;
+        animation: name both .5s alternate-reverse infinite;
+    }
+    .title h2{
+        margin-top: 1%;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 4%;
+    }
+    .transactionid{
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        margin-bottom: 6%;
+    }
+    .transactionbtn button{
+        padding: 0.3em 0.3em;
+        background: #ffffff;
+        border: none;
+        font-size: 1.3rem;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Montserrat',sans-serif ;
+    }
+}
+
+

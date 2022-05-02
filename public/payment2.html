@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Finalise Your Registration</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Anton|Luckiest+Guy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+ height: 100%;
+ color: #ffffff;
+ font-family: 'Poppins', sans-serif;
+}
+h2,h4{
+ font-weight: 900;
+}
+.payment{
+background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(paymentpage.jpg);
+background-repeat: repeat-x;   
+
+background-size: cover; 
+min-height: 100vh;
+width: 100%; /* may not be necessary */
+}
+.detailemail{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.title h2{
+    margin-top: 1%;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+img{
+    height: 200px;
+    width: 350px;
+}
+.googlepayimg{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.payicon{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+.payicon i{
+    font-size: 5rem;
+    color: #1a1919;
+    animation: name both .5s alternate-reverse infinite;
+}
+.paynumber{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.paynumber h2{
+    letter-spacing: 3px;
+    font-size: 1.8rem;
+}
+
+.transactionid{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+.transactionbtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.transactionbtn button{
+    padding: 0.5em 0.5em;
+    background: #ffffff;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat',sans-serif ;
+}
+
+.transactionbtn button:hover{
+    transition: all .3s;
+    background: rgb(21, 167, 21) ;
+    color: #ffffff;
+    box-shadow: 1px 1px 7px #000000;
+}
+input{
+    background: #ffffff;
+    padding: .5em .5em;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+@keyframes name{
+    from{
+        color: #ffffff;
+        
+    }
+    to{
+        color: #666161; 
+    }
+}
+
+@media all and (max-width:730px){
+    img{
+        height: 150px;
+        width: 300px;
+    }
+    .payicon i{
+        font-size: 3rem;
+        color: #1a1919;
+        animation: name both .5s alternate-reverse infinite;
+    }
+    .title h2{
+        margin-top: 1%;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 4%;
+    }
+    .transactionid{
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        margin-bottom: 6%;
+    }
+    .transactionbtn button{
+        padding: 0.3em 0.3em;
+        background: #ffffff;
+        border: none;
+        font-size: 1.3rem;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Montserrat',sans-serif ;
+    }
+}
+
+
+
+</style>
+<body>
+    <section class="payment">
+        <div class="payemnt">
+            <div class="title">
+                <h2>Final Step</h2>
+            </div>
+            <div class="googlepayimg">
+                <img src="googlelogo.jpg" alt="">
+            </div>
+            <div class="payicon">
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </div>
+            <div class="paynumber">
+                <h2>+91 9922431617</h2>
+            </div>
+            <form action="/payment" method="POST">
+                <div class="email detailemail" >
+                    <input type="email" name="email" placeholder="e.g xyz@gmail.com"  required></input>
+                </div>
+            <div class="transactionid">
+                <input type="text" name="transaction" placeholder="Transaction ID" required>
+            </div>
+            <div class="transactionbtn">
+                <a href="/"><button id="transactionbtn">Done &#10004;</button></a>
+            </div>
+        </form>
+        </div>
+    </section>
+</body>
+</html>

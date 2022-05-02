@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Yeon+Sung&display=swap" rel="stylesheet
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal</title>
+</head>
+<style>
+    .login-one{
+    background-image: url(clgpic.jpg);
+    background-repeat: repeat-x;   
+    background-size: cover; 
+    min-height: 100vh;
+    width: 100%; /* may not be necessary */
+    }
+
+ .wholecont{
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4));
+    margin-right: 2%;
+    margin-left: 2%;
+    border-radius: 0 0 30px 30px;
+}
+
+.regcontainer{
+display: flex;
+justify-content: center;
+}
+.regcontainer h1{
+margin-top: 2%;
+margin-right: 0%;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: 2rem;
+font-family: 'Poppins',sans-serif ;
+text-shadow: 1px 1px 5px #000000;
+}
+.name,.email,.number,.interest,.gender,.place,.btn,.password,.projectdescript1,.projectdescript2{
+display: flex;
+justify-content: center;
+}
+.name , .email,.number,.place,.password input{
+margin-right: 0%;
+margin-top: 2%;
+}
+.projectdescript1 textarea{
+    margin-right: 0%;
+    margin-top: 2%; 
+    height: 90px;
+    width: 250px;
+}
+.projectdescript2 textarea{
+    margin-right: 0%;
+    margin-top: 2%; 
+    height: 50px;
+    width: 300px;
+}
+.interest select{
+margin-right: 0%;
+margin-top: 2%;
+}
+.gender select{
+margin-right: 0%;
+margin-top: 2%;
+}
+
+.btn #submitbtn{
+margin-right: 0%;
+margin-top: 0%;
+margin-bottom: 5%;
+font-family: 'Montserrat',sans-serif ;
+}
+input,textarea{
+    background: #ffffff;
+    padding: .5em .5em;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Lexend Deca', sans-serif;
+    
+}
+
+select{
+    background: #ffffff;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: .5em .5em;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <section class="login-one">
+        <div class="login-one">
+   
+            <div class="wholecont">
+                <div class="regcontainer">
+                    <h1>Project Details</h1>
+               
+                </div>
+                <form action="/projectregister" method="POST">
+                <div class="name">
+                    <input type="text" name="projname" placeholder="Project Title" required></input>
+                </div>
+                <div class="email">
+                    <input type="text" name="projguide" placeholder="Guide Name" required></input>
+                </div>
+                <div class="number">
+                    <input type="number" name="guidenumber" placeholder="Guide Contact No." required></input>
+                </div>
+             <div class="projectdescript1">
+                 <textarea name="projdescription" placeholder="Project Description"></textarea>
+             </div>
+             <div class="projectdescript2">
+                <textarea name="projrequire" placeholder="Project Requirement, If Any ?"></textarea>
+            </div>
+                <div class="btn">
+                    <button id="submitbtn">Next	&#8594;</button>
+                </div>
+                </form>
+                </div>
+                <div class="credits-2" style="display: none;">
+                    <h3>&copy; YourOwnMentor 2020</h3> 
+                 </div>
+ 
+        </div>
+    </section>
+</body>
+<script src="./js/main.js"></script>
+</html>

@@ -2,11 +2,14 @@
 <html lang="en">
 
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Yeon+Sung&display=swap" rel="stylesheet
     <meta http-equiv=" X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Yeon+Sung&display=swap" rel="stylesheet">
     <title>Personal</title>
 </head>
 <style>
@@ -157,48 +160,60 @@
         font-size: 1.6rem;
     }
 
-    .detailemail{
+    .detailemail {
         margin-bottom: 2%;
     }
 
-  .interest {
-      margin-bottom: 2%;
-      display: flex;
-      justify-content: center;
-  }
-
-  .interest select{
-      display: flex;
-      justify-content: center;
-  }
-  @media all and (max-width:730px){
-    .question1, .question2{
-          font-size: .7rem;
-          margin-right: 2%;
-          margin-left: 2%;
-      }
-      label {
-        font-size: 1rem;
-    }
-    .interest{
+    .interest {
         margin-bottom: 2%;
+        display: flex;
+        justify-content: center;
     }
-    .interest select{
-        width: 200px;
+
+    .interest select {
+        display: flex;
+        justify-content: center;
     }
-    .detailemail{
-        margin-bottom: 10%;
+
+    @media all and (max-width:730px) {
+
+        .question1,
+        .question2 {
+            font-size: .7rem;
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        .interest {
+            margin-bottom: 2%;
+        }
+
+        .interest select {
+            width: 200px;
+        }
+
+        .detailemail {
+            margin-bottom: 10%;
+        }
+
+        .question1,
+        .question2 {
+            margin-bottom: 1%;
+        }
+
+        .reply1,
+        .reply2 {
+            margin-bottom: 7%;
+        }
+
+        button {
+            font-size: .7rem;
+        }
     }
-    .question1,.question2{
-        margin-bottom: 1%;
-    }
-    .reply1,.reply2{
-        margin-bottom: 7%;
-    }
-   button{
-       font-size: .7rem;
-   }
-  }
 </style>
 
 <body>
@@ -210,70 +225,71 @@
 
                 </div>
                 <form action="iitdet" method="POST">
-                <div class="email detailemail">
-                    <input type="email" name="email" value="<%= emailval %>" placeholder="e.g xyz@gmail.com" readonly required></input>
-                </div>
-                <div class="question1">
-                    <h2>Do you want free certification for C programming from IIT Bombay ?</h2>
-                </div>
+                    <div class="email detailemail">
+                        <input type="email" name="email" value="<%= emailval %>" placeholder="e.g xyz@gmail.com"
+                            readonly required></input>
+                    </div>
+                    <div class="question1">
+                        <h2>Do you want free certification for C programming from IIT Bombay ?</h2>
+                    </div>
 
-                <div class="reply1">
-                    <input type="radio" id="Yes" name="reply1" value="Yes">
-                    <label for="Yes">Yes</label><br>
-                    <input type="radio" id="No" name="reply1" value="No">
-                    <label for="No">No</label><br>
-                </div>
-                <div class="question1">
-                    <h2>Do you want free accomodation ?</h2>
-                </div>
+                    <div class="reply1">
+                        <input type="radio" id="Yes" name="reply1" value="Yes">
+                        <label for="Yes">Yes</label><br>
+                        <input type="radio" id="No" name="reply1" value="No">
+                        <label for="No">No</label><br>
+                    </div>
+                    <div class="question1">
+                        <h2>Do you want free accomodation ?</h2>
+                    </div>
 
-                <div class="reply1">
-                    <input type="radio" id="Yes" name="reply3" value="Yes">
-                    <label for="Yes">Yes</label><br>
-                    <input type="radio" id="No" name="reply3" value="No">
-                    <label for="No">No</label><br>
-                </div>
+                    <div class="reply1">
+                        <input type="radio" id="Yes" name="reply3" value="Yes">
+                        <label for="Yes">Yes</label><br>
+                        <input type="radio" id="No" name="reply3" value="No">
+                        <label for="No">No</label><br>
+                    </div>
 
-                <div class="question2">
-                    <h2>Do you want to register for free workshop on Sunday ?</h2>
-                </div>
+                    <div class="question2">
+                        <h2>Do you want to register for free workshop on Sunday ?</h2>
+                    </div>
 
-                <div class="reply2">
-                    <input type="radio" id="one" name="reply2" value="Yes" oninput="answer1()">
-                    <label for="Yes">Yes</label><br>
-                    <input type="radio" id="two" name="reply2" value="No" oninput="answer2()">
-                    <label for="No">No</label><br>
-                </div>
+                    <div class="reply2">
+                        <input type="radio" id="one" name="reply2" value="Yes" oninput="answer1()">
+                        <label for="Yes">Yes</label><br>
+                        <input type="radio" id="two" name="reply2" value="No" oninput="answer2()">
+                        <label for="No">No</label><br>
+                    </div>
 
-                <div class="interest" id="option" style="display: none;">
-                    <select name="list" required>
-                        <option hidden>List of Workshops</option>
-                        <option>Electrical House Wiring</option>
-                        <option>Attractive Graphic Designing</option>
-                        <option>Design and Simulation VLAN using CISCO Packet Tracer</option>
-                        <option>Internet Of Things</option>
-                        <option>VLSI</option>
-                        <option>Microcontroller & Application</option>
-                        <option>3D Printing</option>
-                        <option>IC Engine</option>
-                    </select>
-                </div>
-                <div class="btn">
-                    <button id="submitbtn">Done &#10004;</button>
-                
+                    <div class="interest" id="option" style="display: none;">
+                        <select name="list" required>
+                            <option hidden>List of Workshops</option>
+                            <option>Electrical House Wiring</option>
+                            <option>Attractive Graphic Designing</option>
+                            <option>Design and Simulation VLAN using CISCO Packet Tracer</option>
+                            <option>Internet Of Things</option>
+                            <option>VLSI</option>
+                            <option>Microcontroller & Application</option>
+                            <option>3D Printing</option>
+                            <option>IC Engine</option>
+                        </select>
+                    </div>
+                    <div class="btn">
+                        <button id="submitbtn">Done &#10004;</button>
+
                 </form>
-                </div>
-
-
-        
-
-
-                <div class="btn">
-                    <button id="backbtn" onclick="backtopersonal2()">Back &#8592;</button>
-                </div>
-
             </div>
-     
+
+
+
+
+
+            <div class="btn">
+                <button id="backbtn" onclick="backtopersonal2()">Back &#8592;</button>
+            </div>
+
+        </div>
+
 
         </div>
 
@@ -285,23 +301,23 @@
 </body>
 <script src="./js/main.js"></script>
 <script type="text/javascript">
-console.log("Hello")
-let answer1= ()=>{
-    console.log("Entered1");
-    var response1 = document.getElementById("one").value;
-    var response2 = document.getElementById("two").value;
-    var options = document.getElementById("option");
-    options.style.display = "flex";
-    options.style.justifyContent = "center"
-}
+    console.log("Hello")
+    let answer1 = () => {
+        console.log("Entered1");
+        var response1 = document.getElementById("one").value;
+        var response2 = document.getElementById("two").value;
+        var options = document.getElementById("option");
+        options.style.display = "flex";
+        options.style.justifyContent = "center"
+    }
 
-let answer2= ()=>{
-    console.log("Entered2");
-    
-    var options = document.getElementById("option");
-    options.style.display = "none"
+    let answer2 = () => {
+        console.log("Entered2");
 
-}
+        var options = document.getElementById("option");
+        options.style.display = "none"
+
+    }
 </script>
 
 

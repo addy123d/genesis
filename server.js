@@ -118,7 +118,8 @@ app.post("/payment", (req, res) => {
                     otherPerson.save()
                         .then((person) => {
                             console.log(`Database updated successfully`);
-                            res.sendFile('./public/success.html', { root: __dirname });
+                            res.redirect("https://chat.whatsapp.com/Hv4d6jqWZqlGGREvS9GID3");
+                            // res.sendFile('./public/success.html', { root: __dirname });
                         })
                         .catch(err => console.log(err));
                 }
